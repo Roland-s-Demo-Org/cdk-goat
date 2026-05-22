@@ -16,4 +16,7 @@ RUN python -m pip install -r requirements.txt
 COPY run.py /app/
 COPY sqli /app/sqli
 
+RUN useradd -U -u 1000 appuser && chown -R 1000:1000 /app
+USER 1000
+
 CMD ["python", "run.py"]
