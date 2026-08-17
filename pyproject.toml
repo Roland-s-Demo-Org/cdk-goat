@@ -7,6 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+jinja2 = {version = "3.1.2+aikido.8", source = "aikido-pypi-repo"}
 
 [tool.poetry.dev-dependencies]
 # Automation
@@ -27,6 +28,11 @@ pytest = "*"
 
 # Diagrams
 diagrams = "*"
+
+[[tool.poetry.source]]
+name = "aikido-pypi-repo"
+url = "https://pypi.aikido.io/d31fc8ec94e6da07d30"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
